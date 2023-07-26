@@ -34,3 +34,9 @@ function showlist(){
     listcont.innerHTML=localStorage.getItem("data");
 }
 showlist();
+inputBox.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        addTask();
+    }
+});
